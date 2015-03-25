@@ -22,6 +22,11 @@ def viewprofile():
   return render_template("profile 2.html", title="View User GUI", u=u)
   
 
+@app.route('/games', methods=['GET', 'POST'])
+def games():
+  return render_template("/proj-1/index.html", title="game")
+  
+  
 @app.route('/gui_profile/<idNo>', methods=['GET', 'POST'])
 def gui_profile(idNo):
   a = models.Profile.query.get(idNo)
