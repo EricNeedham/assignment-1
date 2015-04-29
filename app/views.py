@@ -22,9 +22,17 @@ def viewprofile():
   return render_template("profile 2.html", title="View User GUI", u=u)
   
 
-@app.route('/games', methods=['GET', 'POST'])
+@app.route('/boilerplate', methods=['GET', 'POST'])
 def games():
-  return render_template("/proj-1/index.html", title="game")
+  return render_template("boilerplate.html", title="game")
+
+@app.route('/invader', methods=['GET', 'POST'])
+def invader():
+  return render_template("invader.html", title="game")
+
+@app.route('/gamelist', methods=['GET', 'POST'])
+def gameList():
+  return render_template("gameList.html", title="GamePage")
   
   
 @app.route('/gui_profile/<idNo>', methods=['GET', 'POST'])

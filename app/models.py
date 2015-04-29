@@ -1,5 +1,4 @@
 from . import db
-
 class Profile(db.Model):
   userid = db.Column(db.Integer, primary_key=True, nullable=False, unique=True)
   fname = db.Column(db.String(80),nullable=False, index=True)
